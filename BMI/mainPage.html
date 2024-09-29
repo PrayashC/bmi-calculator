@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="bmilayout.css"></link>
+</head>
+<body class="body" >
+<div class="outer" >
+    <div class="title">
+        BMI Calculator
+    </div>
+        <form  class="info" name="bmiForm" onsubmit="return bmi()" onreset="document.location.reload()">
+            <fieldset class="insideForm">
+                <label for="ag">Age</label>
+                <input type="date" name="bday" class="calender" oninput="autoAgeSet()" title="Set Birthdate to Calculate Age">
+                <input type = "text" name="age" id="ag" class="textbox">
+            </fieldset>
+            <fieldset class="insideForm">
+                <label for="ht">Height(in cm)</label>
+                <input type = "text" name="height" id="ht" class="textbox">
+            </fieldset>
+            <fieldset class="insideForm">
+                <label for="wt">Weight(in Kg)</label>
+                <input type = "text" name="weight" id="wt" class="textbox">
+            </fieldset>
+            <fieldset class="insideFormButton">
+                <div class="divbtn">
+                    <button type="submit" class="cbtn" onmousedown="onclickfun()" onmouseup="offclick()">Submit</button>
+                </div>
+                <div class="divbtn">
+                    <button type="reset" class="cbtn" onmousedown="active()" onmouseup="inactive()">Reset</button>
+                </div>
+                
+            </fieldset>
+        </form>
+    <div class="bmiResult">
+       <div class="finResult">Result Will Appear Here</div>
+    </div>
+</div>
+</body>
+<script lang="text/javascript" src="bmi.js">
+</script>
+</html>
